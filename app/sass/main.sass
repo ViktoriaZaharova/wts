@@ -1,0 +1,846 @@
+@import "fonts"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+	content: none
+
+table
+	border-collapse: collapse
+	border-spacing: 0
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: normal
+	font-family: $default-font
+	font-weight: normal
+	background: #fff
+	color: #0C1B36
+
+html, body
+	overflow-x: hidden
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+a
+	display: block
+	text-decoration: none
+	transition: .3s ease
+	outline: none
+
+	&:hover, &:focus
+		text-decoration: none
+
+input, textarea, select
+	outline: none
+	box-shadow: none
+	appearance: none
+	padding: 0 8px 0 14px
+	box-sizing: border-box
+	font-family: $default-font
+	font-size: 18px
+	background: #fff
+	width: 100%
+
+input
+	border: 1px solid #022A6A
+		radius: 8px	
+	height: 40px
+
+button
+	border: none
+	padding: 0
+	cursor: pointer
+
+
+.label-text
+	color: #0C1B36
+	font-size: 20px
+	font-weight: 500
+	font-family: $font
+
+label
+	display: block
+	margin: 0 0 16px	
+
+.label-group
+	input
+		width: 142px
+		margin: 0 7px
+
+.form
+	max-width: 368px
+	width: 100%
+	margin: 0 auto
+	button
+		max-width: none	
+		margin: 23px auto 0	
+
+.container
+	padding: 0 15px
+	box-sizing: border-box
+	margin: 0 auto
+	width: 100%
+	max-width: 1790px
+	display: flex
+	flex-wrap: wrap
+	z-index: 1
+	position: relative
+
+.btn
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	height: 42px
+	border: none
+	radius: 4px
+	font-size: 18px
+	font-weight: 500
+	width: 100%
+	max-width: 240px
+	border-radius: 4px
+
+.btn-accent
+	background: $btn-accent
+	color: $accent
+	&:hover
+		background: linear-gradient(180deg, #F3D576 0%, #C29A1B 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%)
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+		color: $accent
+	&:focus
+		background: linear-gradient(180deg, #C29A1B 0%, #F3D576 100%), linear-gradient(180deg, #F0DDA2 0%, #C6A987 100%)
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25)
+		color: $accent
+
+.btn-blue
+	background: $accent
+	color: #fff
+	font-family: $font
+	font-size: 20px
+	&:hover
+		background: linear-gradient(180deg, #163D8E 0%, #1E5FE7 100%)
+		color: #fff
+		box-shadow: 0px 4px 4px rgba(13, 55, 124, 0.32)
+	&:focus
+		color: #fff
+		background: linear-gradient(180deg, #1E5FE7 0%, #163D8E 100%)
+		box-shadow: 0px 4px 4px rgba(13, 55, 124, 0.32)
+
+.btn-menu
+	display: none
+
+.list-lang
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	margin: 0 29px 0 auto
+	li
+		margin: 0 20px 0 0
+		&:last-child
+			margin: 0
+		a
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 36px
+			height: 24px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+h2
+	width: 100%
+	font-size: 48px
+	font-weight: bold
+	text-align: center
+	@include gradient-text
+
+.w-100
+	width: 100%
+
+// header
+header
+	left: 0
+	top: 0
+	z-index: 3
+	width: 100%
+	position: fixed
+	padding: 19px 0
+	transition: .3s ease
+	.container
+		align-items: center
+	.logo
+		display: none
+
+.scroll
+	background: $header
+	.menu, .logo
+		display: flex
+
+.logo
+	max-width: 75px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	filter: brightness(0) invert(1)
+
+.menu
+	display: none
+	align-items: center
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin: 0 0 0 48px
+	li
+		margin: 0 32px 0 0
+		&:last-child
+			margin: 0
+		a
+			color: #fff
+			font-size: 18px
+			font-weight: 500
+
+.video-iframe
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+// .trend-strategies
+.trend-strategies
+	padding: 104px 0 16px
+	position: relative
+
+	.container
+		align-items: flex-start
+		justify-content: space-between
+		padding: 0 94px 0 116px
+	&::before, &:after
+		content: ''
+		position: absolute
+		left:
+		top: 0
+		width: 100%
+		height: 100%
+	&::before
+		background: url('../img/bg1.jpeg') no-repeat center
+			size: cover
+		opacity: 0.3
+	&::after
+		background: url('../img/bg2.png') no-repeat center
+			size: cover
+		opacity: 0.8
+	h2
+		text-align: left
+		margin: 0 0 16px
+	.box-text
+		p
+			margin: 0 0 49px
+
+.trend-strategies__left
+	max-width: 812px
+	width: 100%
+
+.box-text
+	line-height: 140%
+	font-size: 18px
+	p
+		margin: 0 0 30px
+		&:last-child
+			margin: 0
+
+.trend-strategies__right
+	font-size: 20px
+	text-align: center
+	max-width: 719px
+	width: 100%
+	box-shadow: 0px 2px 8px #E8EBF9
+	background: #fff
+	border-radius: 8px
+	padding: 21px 33px 21px 40px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	h3
+		margin: 0 auto 26px
+		font-weight: bold
+		font-size: 24px
+		@include gradient-text
+
+.trend-strategies__img
+	max-width: 176px
+	width: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 4px
+	overflow: hidden
+	filter: drop-shadow(0px 2px 6px rgba(26, 106, 165, 0.24))
+
+.trend-strategies__text
+	width: calc(100% - 176px)
+	padding: 0 0 0 40px
+	p
+		line-height: 140%
+
+.video-box
+	margin: 90px auto 0
+	filter: drop-shadow(0px 16px 32px rgba(20, 56, 121, 0.24))
+	width: 100%
+	max-width: 742px
+	height: 416px
+	iframe
+		width: 100%
+		height: 100%
+
+// .mission
+.mission
+	position: relative
+	overflow: hidden
+	padding: 61px 25px
+	&:after
+		content: ''
+		position: absolute
+		opacity: 0.1
+		background: linear-gradient(90deg, #FFFFFF 9.48%, rgba(255, 255, 255, 0) 74.34%), url('../img/img2.jpeg'), #FFFFFF
+		top: -142px
+		right: 0
+		width: 1440px
+		height: 1177px
+	h2
+		margin: 0 auto 24px
+	.container
+		align-items: center
+
+strong
+	display: inline-block
+	font-weight: bold
+
+.color-blue
+	color: $accent
+
+.mission-images
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+	justify-content: space-between
+	position: relative
+	max-width: 628px
+	width: 100%
+
+.mission-img
+	overflow: hidden
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 8px
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&:first-child
+		margin: 0 0 0 auto
+		width: 404px
+		height: 371px
+		position: relative
+		z-index: 2
+	&:last-child
+		width: 384px
+		height: 324px
+		margin: -197px 0 0
+	&:nth-child(2)
+		bottom: 52px
+		left: 110px
+		z-index: 1
+		position: absolute
+		border-radius: 20px
+		background-blend-mode: multiply
+		mix-blend-mode: multiply
+		img
+			height: auto
+			object-fit: contain
+
+.mission-content
+	width: calc(100% - 628px)
+	padding: 0 0 0 80px
+
+// programs
+.programs
+	background: url('../img/bg3.png') no-repeat center
+		size: cover
+	padding: 104px 0 40px
+	.container
+		align-items: center
+		justify-content: space-between
+		padding: 0 120px 0 93px
+	h2
+		margin: 0 auto 53px
+
+.logo-program
+	display: flex
+	align-items: center
+	justify-content: center
+	max-width: 315px
+	width: 100%
+	&:last-child
+		max-width: 222px
+
+.programs-content
+	max-width: 906px
+	width: 100%
+	margin: 0 0 60px
+
+// .clients
+.clients
+	background: radial-gradient(98.04% 472.41% at 99% 93.16%, #062A6B 0%, #1D4FAB 100%), #C4C4C4
+	color: #ffffff
+	position: relative
+	padding: 51px 0
+	overflow: hidden
+	.container
+		padding: 0 109px 0 102px
+		justify-content: space-between
+		align-items: center
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translate(0,-50%)
+			right: 41px
+			width: 1318px
+			height: 659px
+			background: url('../img/decor-bg.svg') no-repeat center
+				size: 100%
+		>*
+			position: relative
+			z-index: 1
+	&::before
+		content: ''
+		position: absolute
+		background: #7323B3
+		opacity: 0.56
+		width: 610px
+		height: 610px
+		border-radius: 50%
+		filter: blur(250px)
+		bottom: -58px
+		left: -258px
+
+	h2
+		background: linear-gradient(180deg, #F6B52E 32.14%, #FFD378 85.71%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		font-size: 100px
+		font-weight: 800
+		line-height: 122px
+		margin: -10px 0
+		text-align: left
+	h3
+		font-size: 40px
+		line-height: 59px
+
+.clients-content
+	font-weight: 600
+	font-size: 36px
+	line-height: 44px
+	p
+		color: #F9BD41
+		margin: 0 0 4px
+
+.clients-wrapper
+	display: flex
+	align-items: flex-start
+	flex-wrap: wrap
+
+.list-country
+	text-align: center
+	font-weight: 600
+	font-size: 16px
+	margin: 0 110px 0 0
+	&:last-child
+		margin: 0
+	li
+		margin: 0 auto 25px
+		&:last-child
+			margin: 0 auto
+
+// .advantages
+.advantages
+	background: url('../img/bg4.png') no-repeat center
+		size: cover
+	padding: 104px 0 216px
+	position: relative
+	overflow: hidden
+	&::before, &:after
+		content: ''
+		position: absolute
+		bottom: -30px
+		right: 0
+	&::before
+		width: 603px
+		height: 738px
+		right: 167px
+		background: url('../img/men.png') no-repeat center
+			size: 100%
+		z-index: 1
+	&::after
+		height: 675px
+		width: 552px
+		right: -204px
+		background: url('../img/women.png') no-repeat center
+			size: 100%
+	.container
+		padding: 0 15px 0 112px
+	h2
+		max-width: 1120px
+		width: 100%
+		margin: 0 auto 48px	0
+
+.svg-icon
+	display: inline-block
+	width: 100%
+	height: 100%
+	transition: .3s ease
+
+.advantages-box
+	cursor: pointer
+	transition: .3s ease
+	border: 1px solid rgba(#E3E3E3, .3)
+	radius: 4px
+	background: rgba(#ffffff, .3)
+	width: 31.5%
+	margin: 0 0 24px
+	padding: 22px 24px
+	text-align: center
+	display: flex
+	align-items: center
+	justify-content: space-between
+	font-size: 20px
+	font-weight: 500
+	&:hover
+		color: #F6B52E
+		border-color: rgba(#0D377C, .5)
+		background: rgba(#ffffff, .5)
+		.advantages-box__icon
+			fill: #3C5EA0
+		.f-none
+			fill: none
+			stroke: #3C5EA0
+	p
+		max-width: 232px
+		width: 100%
+
+.advantages-box__icon
+	fill: #F6B52E
+	width: 56px
+	min-width: 56px
+	height: 56px
+
+.f-none
+	fill: none
+	stroke: #F6B52E
+	.path-stroke
+		fill: #F6B52E
+		stroke: #F6B52E
+	.path-fill
+		fill: #F6B52E
+		stroke: #F6B52E
+
+.advantages-wrapper
+	width: 100%
+	max-width: 1120px
+	margin: 0 auto 0 0
+	display: flex
+	align-items: stretch
+	flex-wrap: wrap
+	justify-content: space-between
+
+// .partners
+.partners
+	background: #F4F5FA
+	padding: 80px 0 34px
+	h2
+		margin: 0 auto 25px
+
+.wrapper
+	display: flex
+	align-items: stretch
+	justify-content: space-between
+	flex-wrap: wrap
+
+.color-gold
+	width: 100%
+	color: #DFA52C
+	&:hover
+		text-decoration-line: underline
+	&:focus
+		color: #D08F06
+		text-decoration: none
+
+.partners-box
+	background: #fff
+	width: 48.5%
+	min-height: 417px
+	margin: 0 0 16px
+	padding: 36px 85px 22px
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	box-shadow: 0px 1px 2px #EAEDFB
+	border-radius: 8px
+	border: 1px solid #143879
+	font-size: 18px
+	line-height: 140%
+	a
+		margin: auto auto 0
+		text-align: center
+
+.partners-box__logo
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 140px
+	margin: 0 auto 10px
+	img
+		max-height: 100%
+
+// footer
+footer
+	color: #fff
+	background: url('../img/footer-bg.png') no-repeat center
+		size: cover
+	padding: 43px 0 52px
+	font-size: 14px
+	.logo
+		max-width: 116px
+		margin: 0 44px 0 0
+	.container
+		align-items: center
+
+.mail
+	display: flex
+	align-items: center
+	color: #fff
+	.svg-icon
+		stroke: #fff
+		fill: none
+		width: 24px
+		height: 24px
+		min-width: 24px
+		margin: 0 9px 0 0
+
+.address
+	margin: 0 0 12px
+	font-size: 18px
+	font-weight: 600
+	max-width: 251px
+	width: 100%
+
+.list-social
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	flex-wrap: wrap
+	margin: 7px 0 20px
+	li
+		margin: 0 24px 0 0
+		&:last-child
+			margin: 0
+		a
+			width: 24px
+			height: 24px
+			min-width: 24px
+			svg
+				fill: #fff
+		.links-youtube
+			width: 35px
+			min-width: 35px
+
+.footer-box-social
+	margin: 0 0 0 auto
+	text-align: right
+
+.copyright
+	font-size: 10px
+	opacity: 0.5
+
+// modal
+.modal__div
+	position: fixed
+	max-width: 432px
+	width: 100%
+	height: 100%
+	top: 45%
+	left: 50%
+	transform: translate(-50%, -50%)
+	z-index: 101
+	overflow: auto
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	display: none
+	opacity: 0
+
+.modal__close
+	position: absolute
+	right: 16px
+	top: 16px
+	width: 24px
+	height: 24px
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	svg
+		stroke: #143879
+
+.modal__wrapper
+	background: #FFFFFF
+	border-radius: 8px
+	width: 100%
+	height: auto
+	overflow: auto
+	margin: 50px auto
+	padding: 24px 20px 32px
+	box-sizing: border-box
+	position: relative
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.16)
+	overflow: hidden
+	&::before
+		content: ''
+		position: absolute
+		opacity: 0.2
+		width: 100%
+		height: 100%
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		background: url('../img/bg5.jpeg') no-repeat center
+			size: cover
+	>*
+		position: relative
+		z-index: 1	
+	.modal__close
+		position: absolute	
+		z-index: 2	
+	h2
+		font-size: 32px	
+		margin: 0 auto 28px
+
+.links-blue
+	width: 100%
+	text-align: center
+	color: #163D8E
+	font-size: 18px	
+
+.overlay
+	position: fixed
+	display: none
+	background: #e5e5e5
+	width: 100%
+	height: 100%
+	left: 0
+	top: 0
+	z-index: 100
+	opacity: 0.8
+
+.btn-next
+	display: flex
+	align-items: center
+	margin: 0 0 32px
+	color: #163D8E
+	font-size: 18px
+	padding: 0 0 0 12px
+	svg
+		stroke: #143879
+		width: 24px
+		height: 24px
+		min-width: 24px
+		margin: 0 20px 0 0	
+		fill: none
+
+#modal-password
+	max-width: 464px
+	.modal__wrapper
+		&::before
+			background: url('../img/img2.jpeg') no-repeat center
+				size: cover
+
+#modal-success
+	max-width: 560px
+	h2
+		margin: 75px auto
+
+#modal-changed-password
+	.modal__wrapper
+		&::before
+			background: url('../img/bg6.jpeg') no-repeat center
+				size: cover
+
+@import "media"
+// Всегда в конце
