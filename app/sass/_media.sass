@@ -3,53 +3,497 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-	/**/
+@media only screen and (max-width : 1800px)
+	.trend-strategies .container, .programs .container, .advantages .container
+		padding: 0 20px
 
+	.trend-strategies__left
+		max-width: 712px
+
+	.list-country
+		margin: 0 60px 0 0	
+
+	.advantages::before
+		height: 600px
+		width: 500px
+		right: 70px
+
+	.advantages::after
+		height: 560px
+		width: 450px	
+		right: -170px
+		
+				
+
+@media only screen and (max-width : 1500px)
+	h1
+		font-size: 40px	
+
+	.trend-strategies__left
+		max-width: 612px	
+
+	.programs-content
+		max-width: 840px	
+
+
+
+
+@media only screen and (max-width : 1430px)
+	.programs-content
+		max-width: none
+		order: 1
+		margin: 7px 0 0	
+		text-align: center
+
+	.programs 
+		padding: 77px 0 32px
+		.container	
+			padding: 0 113px 0 93px
+		h2
+			margin: 0 auto 27px
+		
+@media only screen and (max-width : 1400px)
+	.menu
+		margin: 0 0 0 20px
+		li
+			margin: 0 20px 0 0
+			a
+				font-size: 16px
+
+	.trend-strategies__left
+		max-width: 960px
+		text-align: center
+		margin: 0 auto
+
+	h1
+		text-align: center
+		margin: 0 auto 32px
+
+	.trend-strategies
+		padding: 45px 0 29px
+		.box-text 
+			p		
+				margin: 0 0 16px
+				&:last-child
+					margin: 0
+
+	.trend-strategies__right
+		margin: 32px auto
+		max-width: 726px
+		h3
+			margin: 0 auto 46px
+
+	.video-box
+		margin: 0 auto	
+
+	.mission-images
+		max-width: 540px
+
+	.mission-content
+		width: calc(100% - 540px)	
+
+	.clients .container
+		padding: 0 40px		
+
+	.advantages
+		&::before
+			height: 500px
+			width: 400px
+			right: 10px
+		&::after
+			width: 350px
+			height: 460px
+			right: -135px
+					
+
+@media only screen and (max-width : 1200px)
+	main
+		height: 704px
+
+	header
+		padding: 18px 0  
+
+	.list-lang li 
+		margin: 0 16px 0 0
+		a
+			width: 24px
+			height: 16px	
+
+	.menu
+		li
+			a
+				font-size: 15px
+
+	.mission-img:nth-child(2)
+		display: none
+
+	.mission-images
+		max-width: 203px
+
+	.mission-img:first-child
+		width: 100%
+		height: 172px
+		margin: 0 auto 13px
+
+	.mission-img:last-child
+		width: 100%
+		margin: 0		
+		height: 172px
+
+	.mission-content
+		width: calc(100% - 203px)	
+		padding: 0 0 0 44px
+
+	.mission
+		padding: 53px 12px 49px	5px	
+
+	.programs
+		background-position: right top
+		background-size: 1788px
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: url('../img/bg3.png') no-repeat left top
+				size: 1788px
+
+	.list-country
+		margin: 0 30px 0 0
+
+	.advantages
+		padding: 41px 0 52px
+		&:before, &:after
+			display: none
+		h2
+			max-width: none
+			margin: 0 auto 32px
+
+	.advantages-wrapper
+		max-width: none			
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px)
-	/**/
+@media only screen and (max-width : 1100px)
+	.scroll
+		.menu
+			display: none
 
+	header
+		.btn
+			display: none
+		.btn-menu
+			display: flex
+			max-width: 101px	
+
+	.list-lang
+		margin: 0 27px 0 auto
+
+	.logo
+		max-width: 85px	
+
+	.trend-strategies
+		&::before
+			display: none	
+
+	.clients-content
+		width: 100%
+		margin: 0 auto 35px
+		text-align: center
+
+	.clients
+		padding: 27px 0
+		&::before
+			top: -130px
+			left: -274px
+			bottom: auto
+		h2
+			text-align: center	
+		.container
+			&:after
+				right: auto
+				left: 0
+				width: 2000px
+				height: 1000px
+
+	.list-country
+		margin: 0
+		li				
+			margin: 0 0 22px
+
+	.clients-wrapper
+		width: 100%
+		justify-content: space-between		
+
+	.advantages-box
+		width: 356px
+		border-color: rgba(#3C5EA0, .8)
+		margin: 0 0 16px
+		&:last-child
+			margin: 0 auto
+
+	.advantages-wrapper
+		max-width: 800px
+		margin: 0 auto
+
+	.advantages
+		background: url('../img/bg4-tablet.png') no-repeat center
+			size: cover	
+
+	.partners
+		padding: 40px 0 4px
+
+	.partners-box
+		width: 49%
+		margin: 0 0 24px	
+		padding: 35px 10px 22px
+		min-height: 402px
+
+	footer
+		background: linear-gradient(180deg, #0D377C 0%, #062558 100%)
+		padding: 15px 0 16px	
+		.logo
+			margin: 0 34px 0 0
+
+	.list-social
+		margin: 7px 0 20px		
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	/**/
+	footer
+		padding: 25px 0 50px
+		.container
+			flex-direction: column
+			align-items: center
+		.logo
+			margin: 0 auto 30px
+			max-width: 104px	
 
+	.footer-box-social
+		margin: 45px auto 0
+		text-align: center
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px)
-	/**/
+	.list-social
+		margin: 20px auto	
+		justify-content: center
 
+	.address
+		text-align: center	
+
+	.partners-box
+		min-height: 382px
+		padding: 34px 8px 24px
+		font-size: 16px
+		margin: 0 0 16px
+		a.color-gold
+			font-size: 18px
+
+	.partners-box__logo
+		height: 120px
+		margin: 0 auto 22px	
+
+	.partners
+		padding: 32px 0
+		h2
+			margin: 0 auto 33px
+		.container
+			padding: 0 8px	
+
+	.advantages-box
+		width: 49%
+
+	.programs .container
+		padding: 0 8px	
+
+@media only screen and (max-width : 675px)	
+	.advantages-box
+		width: 100%
+		p
+			margin: 0 auto
+
+	.advantages
+		background: transparent
+		position: relative
+		&::before, &::after
+			content: ''	
+			position: absolute
+			width: 731px
+			height: 212px
+			bottom: 0
+			background: url('../img/bg3.png') no-repeat 40px top
+				size: 100%
+			display: block		
+		&::before
+			transform: matrix(1, 0, 0, -1, 0, 0)
+			right: 0
+		&::after
+			left: 0
+			transform: rotate(-180deg)
+		.container
+			padding: 0 10px		
+
+	.clients .container
+		padding: 0 8px	
+		
+	.mission-images
+		display: none
+
+	.mission-content
+		width: 100%
+		padding: 0
+
+	.mission
+		text-align: center
+		padding: 7px 0 30px
+		.container
+			padding: 0 15px		
+			
+
+@media only screen and (max-width : 575px)
+	.partners-box
+		width: 100%
+		min-height: 382px
+		padding: 34px 8px 24px
+		font-size: 16px
+		margin: 0 0 16px
+		a.color-gold
+			font-size: 18px
+
+	.clients
+		padding: 22px 0 17px
+		h2
+			font-size: 80px
+			line-height: 98px
+		h3
+			font-size: 44px
+			line-height: 54px
+		&::before
+			height: 680px
+			top: -148px	
+		.container
+			&::after
+				top: -20px
+				transform: none
+				width: 1054px
+				height: 1000px
+				background: url('../img/decor-bg-phone.svg') no-repeat center
+					size: 100%	
+
+	.clients-content
+		font-size: 32px
+		line-height: 39px
+		margin: 0 auto 44px	
+
+	.list-country
+		width: 50%	
+		margin: 0 0 22px	
+
+	.logo-program:last-child
+		display: none
+
+	.logo-program
+		margin: 0 auto 16px
+
+	.programs
+		padding: 45px 0 42px
+		background: url('../img/bg3-phone.png') no-repeat center top
+			size: 100%
+		&::before
+			display: none	
+		h2
+			margin: 0 auto 19px
+		
+	.trend-strategies .container
+		padding: 0 3px
+		
+	.video-box
+		height: 207px		
+
+	.trend-strategies
+		padding: 39px 0 25px
+		.box-text
+			font-size: 16px
+
+	.trend-strategies__right
+		padding: 24px 9px
+
+	.trend-strategies__text
+		width: 100%
+		padding: 0
+		margin: 34px auto 0
+		h3
+			margin: 0 auto 15px		
+
+	.trend-strategies__img
+		max-width: 171px
+		margin: 0 auto		
+
+	main
+		height: 254px
+		margin: 89px 0 0
+
+	.mobile-menu
+		max-width: 375px
+
+	.logo
+		max-width: 90px
+
+	header
+		padding: 10px 0
+		background: #143879
+		.logo
+			display: flex
+		.container
+			padding: 0 16px 0 9px
+			
+	.btn-close
+		width: 24px
+		height: 24px
+		margin: 0 0 55px auto
+
+	.mobile-menu
+		padding: 33px 15px 37px 10px	
+
+	.modal__wrapper
+		padding: 29px 16px 32px
+		h2
+			font-size: 24px											
+			margin: 0 auto 23px
+
+	.form button
+		height: 40px	
+
+	.modal__div, #modal-password, #modal-success
+		max-width: 360px
+
+	.label-group input
+		margin: 0 1px			
+
+	.label-text
+		font-size: 16px	
+
+	.btn-next
+		padding: 0
+		margin: 0 0 23px	
+
+	#modal-success h2
+		margin: 49px auto	
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
-	/**/
+@media only screen and (max-width : 360px)
+	.advantages-box
+		font-size: 16px
 
+	h2
+		font-size: 36px
 
-/*==========  Mobile First  ==========*/
+	.logo-program
+		max-width: 280px	
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px)
-	/**/
+	.box-text
+		font-size: 16px	
 
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px)
-	/**/
-
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px)
-	/**/
-
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px)
-	/**/
-
+	h1
+		font-size: 38px	

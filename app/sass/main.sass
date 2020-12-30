@@ -139,11 +139,11 @@ label
 		margin: 23px auto 0	
 
 .container
-	padding: 0 15px
+	padding: 0 20px
 	box-sizing: border-box
 	margin: 0 auto
 	width: 100%
-	max-width: 1790px
+	max-width: 1800px
 	display: flex
 	flex-wrap: wrap
 	z-index: 1
@@ -212,9 +212,16 @@ label
 				height: 100%
 				object-fit: cover
 
-h2
+h1
 	width: 100%
 	font-size: 48px
+	font-weight: bold
+	margin: 0 0 16px
+	@include gradient-text				
+
+h2
+	width: 100%
+	font-size: 40px
 	font-weight: bold
 	text-align: center
 	@include gradient-text
@@ -264,6 +271,9 @@ header
 			font-size: 18px
 			font-weight: 500
 
+main
+	height: 810px		
+
 .video-iframe
 	width: 100%
 	height: 100%
@@ -273,6 +283,7 @@ header
 .trend-strategies
 	padding: 104px 0 16px
 	position: relative
+	background: #fff
 
 	.container
 		align-items: flex-start
@@ -293,9 +304,6 @@ header
 		background: url('../img/bg2.png') no-repeat center
 			size: cover
 		opacity: 0.8
-	h2
-		text-align: left
-		margin: 0 0 16px
 	.box-text
 		p
 			margin: 0 0 49px
@@ -430,7 +438,7 @@ strong
 
 // programs
 .programs
-	background: url('../img/bg3.png') no-repeat center
+	background: url('../img/bg3.png') no-repeat center top
 		size: cover
 	padding: 104px 0 40px
 	.container
@@ -438,7 +446,7 @@ strong
 		justify-content: space-between
 		padding: 0 120px 0 93px
 	h2
-		margin: 0 auto 53px
+		margin: 0 auto -10px
 
 .logo-program
 	display: flex
@@ -452,7 +460,6 @@ strong
 .programs-content
 	max-width: 906px
 	width: 100%
-	margin: 0 0 60px
 
 // .clients
 .clients
@@ -486,7 +493,7 @@ strong
 		width: 610px
 		height: 610px
 		border-radius: 50%
-		filter: blur(250px)
+		filter: blur(150px)
 		bottom: -58px
 		left: -258px
 
@@ -500,7 +507,7 @@ strong
 		margin: -10px 0
 		text-align: left
 	h3
-		font-size: 40px
+		font-size: 48px
 		line-height: 59px
 
 .clients-content
@@ -570,11 +577,11 @@ strong
 	cursor: pointer
 	transition: .3s ease
 	border: 1px solid rgba(#E3E3E3, .3)
-	radius: 4px
+		radius: 4px
 	background: rgba(#ffffff, .3)
 	width: 31.5%
 	margin: 0 0 24px
-	padding: 22px 24px
+	padding: 21px 24px
 	text-align: center
 	display: flex
 	align-items: center
@@ -656,7 +663,7 @@ strong
 	border: 1px solid #143879
 	font-size: 18px
 	line-height: 140%
-	a
+	a.color-gold
 		margin: auto auto 0
 		text-align: center
 
@@ -841,6 +848,48 @@ footer
 		&::before
 			background: url('../img/bg6.jpeg') no-repeat center
 				size: cover
+
+.mobile-menu
+	position: fixed
+	z-index: 10
+	right: 0
+	top: 0
+	background: #143879
+	padding: 35px 24px 29px 40px
+	max-width: 288px
+	width: 100%	
+	display: none	
+	.logo
+		top: 10px
+		left: 9px
+		position: absolute
+		max-width: 90px
+		width: 100%
+		margin: 0
+	.menu
+		width: 100%
+		flex-direction: column
+		align-items: flex-end
+		display: flex
+		margin: 0
+		li
+			margin: 0 0 23px
+			width: 100%	
+			&:last-child
+				margin: 0
+			a
+				text-align: right
+				font-size: 18px
+	.btn
+		margin: 40px 0 0 auto			
+	
+.btn-close
+	width: 32px
+	height: 32px
+	margin: 0 7px 45px auto
+	svg
+		stroke: #fff
+
 
 @import "media"
 // Всегда в конце
