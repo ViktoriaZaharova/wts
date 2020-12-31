@@ -72,3 +72,6 @@ $('.btn-menu').on('click', function (e) {
 $('.btn-close').on('click', function () {
   $('.mobile-menu').fadeOut();
 });
+
+// animate
+new WOW().init();
