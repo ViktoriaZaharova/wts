@@ -22,8 +22,28 @@
 		height: 560px
 		width: 450px	
 		right: -170px
-		
-				
+
+@media only screen and (max-width : 1600px)				
+	.programs
+		background: #fff
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: url('../img/bg3.png') no-repeat center top
+				size: 100%
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: url('../img/bg3.png') no-repeat center top
+				size: 100%	
 
 @media only screen and (max-width : 1500px)
 	h1
@@ -148,18 +168,14 @@
 		padding: 53px 12px 49px	5px	
 
 	.programs
-		background-position: right top
-		background-size: 1788px
+		
 		position: relative
 		&::before
-			content: ''
-			position: absolute
-			left: 0
-			top: 0
-			width: 100%
-			height: 100%
 			background: url('../img/bg3.png') no-repeat left top
 				size: 1788px
+		&::after
+			background-position: right top
+			background-size: 1788px	
 
 	.list-country
 		margin: 0 30px 0 0
@@ -209,14 +225,14 @@
 			top: -130px
 			left: -274px
 			bottom: auto
+		&:after
+			right: auto
+			left: 0
+			width: 2000px
+			top: -20px
+			transform: none
 		h2
 			text-align: center	
-		.container
-			&:after
-				right: auto
-				left: 0
-				width: 2000px
-				height: 1000px
 
 	.list-country
 		margin: 0
@@ -352,6 +368,11 @@
 			
 
 @media only screen and (max-width : 575px)
+	.trend-strategies, .mission
+		background: #fff
+		&::after
+			display: none
+
 	.partners-box
 		width: 100%
 		min-height: 382px
@@ -372,14 +393,12 @@
 		&::before
 			height: 680px
 			top: -148px	
-		.container
-			&::after
-				top: -20px
-				transform: none
-				width: 1054px
-				height: 1000px
-				background: url('../img/decor-bg-phone.svg') no-repeat center
-					size: 100%	
+		&::after
+			top: 0
+			width: 100%
+			height: 100%
+			background: url('../img/decor-bg-phone.svg') no-repeat right top
+				size: contain	
 
 	.clients-content
 		font-size: 32px
@@ -400,10 +419,10 @@
 		padding: 45px 0 42px
 		background: url('../img/bg3-phone.png') no-repeat center top
 			size: 100%
-		&::before
+		&::before, &::after
 			display: none	
 		h2
-			margin: 0 auto 19px
+			margin: 0 auto 30px
 		
 	.trend-strategies .container
 		padding: 0 3px
@@ -435,7 +454,9 @@
 		margin: 89px 0 0
 
 	.mobile-menu
-		max-width: 375px
+		max-width: none
+		.logo
+			display: flex
 
 	.logo
 		max-width: 90px
@@ -443,7 +464,7 @@
 	header
 		padding: 10px 0
 		background: #143879
-		.logo
+		.logo, .btn-menu
 			display: flex
 		.container
 			padding: 0 16px 0 9px
@@ -497,3 +518,6 @@
 
 	h1
 		font-size: 38px	
+
+	.partners-box
+		font-size: 14px	

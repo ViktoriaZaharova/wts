@@ -73,9 +73,9 @@ body
 	background: #fff
 	color: #0C1B36
 
-// html, body
-// 	overflow-x: hidden
-// 	height: auto
+html, body
+	overflow-x: hidden
+	height: auto
 
 img
 	display: block
@@ -135,7 +135,7 @@ label
 	max-width: 368px
 	width: 100%
 	margin: 0 auto
-	button
+	button, .btn
 		max-width: none	
 		margin: 23px auto 0	
 
@@ -218,14 +218,16 @@ h1
 	font-size: 48px
 	font-weight: bold
 	margin: 0 0 16px
-	@include gradient-text				
+	span
+		@include gradient-text				
 
 h2
 	width: 100%
 	font-size: 40px
 	font-weight: bold
 	text-align: center
-	@include gradient-text
+	span
+		@include gradient-text
 
 .w-100
 	width: 100%
@@ -272,8 +274,8 @@ header
 			font-size: 18px
 			font-weight: 500
 
-main
-	height: 810px		
+// main
+// 	height: 810px		
 
 .video-iframe
 	width: 100%
@@ -338,7 +340,8 @@ main
 		margin: 0 auto 26px
 		font-weight: bold
 		font-size: 24px
-		@include gradient-text
+		span
+			@include gradient-text
 
 .trend-strategies__img
 	max-width: 176px
@@ -371,15 +374,18 @@ main
 	position: relative
 	overflow: hidden
 	padding: 61px 25px
+	// background: linear-gradient(90deg, #FFFFFF 9.48%, rgba(255, 255, 255, 0) 74.34%)
 	&:after
 		content: ''
 		position: absolute
-		opacity: 0.1
-		background: linear-gradient(90deg, #FFFFFF 9.48%, rgba(255, 255, 255, 0) 74.34%), url('../img/img2.jpeg'), #FFFFFF
-		top: -142px
+		opacity: 0.15
+		background: linear-gradient(90deg, #FFFFFF 9.48%, rgba(255, 255, 255, 0) 74.34%), url('../img/img2.jpg') no-repeat center
+			size: cover
+		top: 50%
+		transform: translate(0,-50%)
 		right: 0
-		width: 1440px
-		height: 1177px
+		width: 100%
+		height: 100%
 	h2
 		margin: 0 auto 24px
 	.container
@@ -442,6 +448,7 @@ strong
 	background: url('../img/bg3.png') no-repeat center top
 		size: cover
 	padding: 104px 0 40px
+	position: relative
 	.container
 		align-items: center
 		justify-content: space-between
@@ -453,10 +460,10 @@ strong
 	display: flex
 	align-items: center
 	justify-content: center
-	max-width: 315px
+	max-width: 281px
 	width: 100%
 	&:last-child
-		max-width: 222px
+		max-width: 180px
 
 .programs-content
 	max-width: 906px
@@ -473,19 +480,6 @@ strong
 		padding: 0 109px 0 102px
 		justify-content: space-between
 		align-items: center
-		&::after
-			content: ''
-			position: absolute
-			top: 50%
-			transform: translate(0,-50%)
-			right: 41px
-			width: 1318px
-			height: 659px
-			background: url('../img/decor-bg.svg') no-repeat center
-				size: 100%
-		>*
-			position: relative
-			z-index: 1
 	&::before
 		content: ''
 		position: absolute
@@ -497,7 +491,16 @@ strong
 		filter: blur(150px)
 		bottom: -58px
 		left: -258px
-
+	&::after
+		content: ''
+		position: absolute
+		top: 50%
+		transform: translate(0,-50%)
+		right: 21px
+		width: 1318px
+		height: 100%
+		background: url('../img/decor-bg.svg') no-repeat center
+			size: contain
 	h2
 		background: linear-gradient(180deg, #F6B52E 32.14%, #FFD378 85.71%)
 		-webkit-background-clip: text
@@ -659,9 +662,9 @@ strong
 	flex-direction: column
 	align-items: center
 	text-align: center
-	box-shadow: 0px 1px 2px #EAEDFB
+	box-shadow: 0px 1px 2px 2px rgba(234,237,251,1)
 	border-radius: 8px
-	border: 1px solid #143879
+	border: 1px solid #0d377c
 	font-size: 18px
 	line-height: 140%
 	a.color-gold
@@ -754,7 +757,7 @@ footer
 	display: none
 	opacity: 0
 
-.modal__close
+.modal__close, .close-btn
 	position: absolute
 	right: 16px
 	top: 16px
@@ -788,12 +791,12 @@ footer
 		left: 50%
 		top: 50%
 		transform: translate(-50%,-50%)
-		background: url('../img/bg5.jpeg') no-repeat center
+		background: url('../img/bg5.jpg') no-repeat center
 			size: cover
 	>*
 		position: relative
 		z-index: 1	
-	.modal__close
+	.modal__close, .close-btn
 		position: absolute	
 		z-index: 2	
 	h2
@@ -836,7 +839,7 @@ footer
 	max-width: 464px
 	.modal__wrapper
 		&::before
-			background: url('../img/img2.jpeg') no-repeat center
+			background: url('../img/img2.jpg') no-repeat center
 				size: cover
 
 #modal-success
@@ -867,6 +870,7 @@ footer
 		max-width: 90px
 		width: 100%
 		margin: 0
+		display: none
 	.menu
 		width: 100%
 		flex-direction: column
