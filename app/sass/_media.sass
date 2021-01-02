@@ -69,6 +69,25 @@
 	.advantages
 		background-size: cover	
 
+	.advantages-box
+		font-size: 16px
+		padding: 15px 20px
+
+	.advantages-box__icon
+		width: 46px
+		height: 46px
+		min-width: 46px	
+
+	.advantages-wrapper
+		max-width: 900px		
+
+	.logo-program
+		max-width: 220px
+
+	.logo-program:last-child
+		max-width: 160px	
+			
+
 @media only screen and (max-width : 1430px)
 	.programs-content
 		max-width: none
@@ -284,8 +303,11 @@
 		.logo
 			margin: 0 34px 0 0
 
+@media only screen and (max-width : 992px)	
+	.programs::after, .programs::before
+		background-size: cover
+		height: 250px
 
-/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	footer
 		padding: 25px 0 50px
@@ -334,6 +356,12 @@
 
 	.programs .container
 		padding: 0 8px	
+
+	.logo-program
+		max-width: 190px
+
+	.logo-program:last-child
+		max-width: 140px		
 
 @media only screen and (max-width : 675px)	
 	.advantages-box
@@ -522,8 +550,6 @@
 	h2
 		font-size: 36px
 
-	.logo-program
-		max-width: 280px	
 
 	.box-text
 		font-size: 16px	
