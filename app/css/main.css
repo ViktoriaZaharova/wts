@@ -534,7 +534,7 @@ strong {
 .programs {
   background: url("../img/bg3.png") no-repeat center top;
     background-size: cover;
-  padding: 40px 0;
+  padding: 76px 0;
   position: relative; }
   .programs .container {
     -webkit-box-align: center;
@@ -545,7 +545,7 @@ strong {
             justify-content: space-between;
     padding: 0 120px 0 93px; }
   .programs h2 {
-    margin: 0 auto -10px; }
+    margin: 0 auto 30px; }
 
 .logo-program {
   display: -webkit-box;
